@@ -29,22 +29,11 @@ void AGalaga_Tmap_USFXGameMode::Tick(float DeltaTime)
 void AGalaga_Tmap_USFXGameMode::BeginPlay()
 {
 	Super::BeginPlay();
-	/*GetWorld()->GetTimerManager().SetTimer(SpawnTimerHandle, this, &AGalaga_Tmap_USFXGameMode::AgregarNaveEnemiga, 10.0f, true);
-	GetWorld()->GetTimerManager().SetTimer(AddRowTimerHandle, this, &AGalaga_Tmap_USFXGameMode::AgregarFilaDeNaves, 15.0f, true);
-	*/
-	//FVector SpawnLocation = FVector(500.0f, 500.0f, 250.0f);
-	//FRotator SpawnRotation = FRotator::ZeroRotator;
-	//FVector SpawnLocationT = FVector(600.0f, 600.0f, 250.0f);
-	//// Crear una nueva instancia de ANaveEnemiga (puedes usar cualquier subclase de ANaveEnemiga)
-	//ANaveEnemiga* NuevaNave = GetWorld()->SpawnActor<ANaveEnemigaCaza>(SpawnLocation, SpawnRotation);
-	//ANaveEnemiga* NuevaNave2 = GetWorld()->SpawnActor<ANaveEnemigaTransporte>(SpawnLocationT, SpawnRotation);
-	//// Llamar a la función AgregarNaveEnemiga para agregar la nueva nave al mapa
-	//AgregarNaveEnemiga(1, NuevaNave);
-	//AgregarNaveEnemiga(2, NuevaNave2);
-	GetWorld()->GetTimerManager().SetTimer(SpawnTimerHandle, this, &AGalaga_Tmap_USFXGameMode::SpawnNaveEnemiga, 10.0f, true);
-	//ModificarNaveEnemiga(1, NuevaNave2);
-	GetWorld()->GetTimerManager().SetTimer(ModifyTimerHandle, this, &AGalaga_Tmap_USFXGameMode::ModificarNaves, 11.0f, true);
-	GetWorld()->GetTimerManager().SetTimer(DeleteTimerHandle, this, &AGalaga_Tmap_USFXGameMode::EliminarNavesPeriodicamente, 14.0f, true);
+
+	GetWorld()->GetTimerManager().SetTimer(SpawnTimerHandle, this, &AGalaga_Tmap_USFXGameMode::SpawnNaveEnemiga, 5.0f, true);
+	
+	GetWorld()->GetTimerManager().SetTimer(ModifyTimerHandle, this, &AGalaga_Tmap_USFXGameMode::ModificarNaves, 6.0f, true);
+	GetWorld()->GetTimerManager().SetTimer(DeleteTimerHandle, this, &AGalaga_Tmap_USFXGameMode::EliminarNavesPeriodicamente, 7.0f, true);
 }
 
 void AGalaga_Tmap_USFXGameMode::AgregarNaveEnemiga(int32 ID, ANaveEnemiga* NuevaNave)
@@ -63,20 +52,9 @@ void AGalaga_Tmap_USFXGameMode::AgregarNaveEnemiga(int32 ID, ANaveEnemiga* Nueva
 }
 void AGalaga_Tmap_USFXGameMode::SpawnNaveEnemiga()
 {
-	
-	for (auto& Pair : NaveEnemiga)
-	{
-		ANaveEnemiga* Nave = Pair.Value;
-		if (Nave)
-		{
-			Nave->Destroy();
-		}
-	}
-	NaveEnemiga.Empty(); // Limpiar el mapa de naves enemigas
-
 	const int32 NumeroDeColumnas = 2;
 	const int32 NumeroDeFilas = 5;
-	int32 NaveID = 1; 
+	int32 NaveID = 1;
 
 	for (int32 Columna = 0; Columna < NumeroDeColumnas; ++Columna)
 	{
@@ -85,16 +63,23 @@ void AGalaga_Tmap_USFXGameMode::SpawnNaveEnemiga()
 			FVector SpawnLocation = FVector(Columna * 200.0f, Fila * 100.0f, 350.0f);
 			FRotator SpawnRotation = FRotator::ZeroRotator;
 
-			ANaveEnemiga* NuevaNave = GetWorld()->SpawnActor<ANaveEnemigaCaza>(SpawnLocation, SpawnRotation);
-			if (NuevaNave)
+			// Verificar si ya existe una nave enemiga con el ID correspondiente
+			if (!NaveEnemiga.Contains(NaveID))
 			{
-			
-				AgregarNaveEnemiga(NaveID++, NuevaNave);
+				// Si no existe, crear una nueva nave enemiga
+				ANaveEnemiga* NuevaNave = GetWorld()->SpawnActor<ANaveEnemigaCaza>(SpawnLocation, SpawnRotation);
+				if (NuevaNave)
+				{
+					// Agregar la nueva nave al mapa con su ID correspondiente
+					AgregarNaveEnemiga(NaveID, NuevaNave);
+				}
+				else
+				{
+					UE_LOG(LogTemp, Error, TEXT("No se pudo crear la nave enemiga caza."));
+				}
 			}
-			else
-			{
-				UE_LOG(LogTemp, Error, TEXT("No se pudo crear la nave enemiga caza."));
-			}
+
+			++NaveID;
 		}
 	}
 }
@@ -186,26 +171,25 @@ void AGalaga_Tmap_USFXGameMode::EliminarNaveEnemiga(int32 ID)
 
 void AGalaga_Tmap_USFXGameMode::EliminarNavesPeriodicamente()
 {
-	// Almacena los IDs de las naves enemigas que deseas eliminar
+	// Almacena los IDs de las naves enemigas que deseas eliminar en este intervalo de tiempo
 	TArray<int32> NavesAEliminarIDs;
 
-	// Iterar sobre todas las naves enemigas y almacenar sus IDs
+	// Iterar sobre todas las naves enemigas y almacenar sus IDs si fueron creadas durante este intervalo
 	for (auto& Pair : NaveEnemiga)
 	{
 		int32 ID = Pair.Key;
 		ANaveEnemiga* NaveAEliminar = Pair.Value;
 
-		// Verificar si la nave es válida antes de intentar eliminarla
-		if (NaveAEliminar)
+		// Verificar si la nave fue creada durante este intervalo de tiempo
+		if (NaveAEliminar && NaveAEliminar->CreationTime >= TiempoTranscurrido - 5.0f)
 		{
 			// Destruir la nave
 			NaveAEliminar->Destroy();
+
+			// Almacenar el ID de la nave enemiga para eliminar
+			NavesAEliminarIDs.Add(ID);
 		}
-
-		// Almacenar el ID de la nave enemiga para eliminar
-		NavesAEliminarIDs.Add(ID);
 	}
-
 	// Eliminar las naves enemigas utilizando los IDs almacenados
 	for (int32 ID : NavesAEliminarIDs)
 	{
