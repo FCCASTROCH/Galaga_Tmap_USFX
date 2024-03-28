@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "Galaga_Tmap_USFX",
+			"Path": "C:\\Users\\HP\\Documents\\Unreal Projects\\Galaga_Tmap_USFX\\Source\\Galaga_Tmap_USFX.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "Galaga_Tmap_USFXEditor",
+			"Path": "C:\\Users\\HP\\Documents\\Unreal Projects\\Galaga_Tmap_USFX\\Source\\Galaga_Tmap_USFXEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}

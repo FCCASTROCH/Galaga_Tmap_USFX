@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\Galaga_Tmap_USFX.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{D212EA4C-7292-4842-BDA2-69A5A26DDB82}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\Galaga_Tmap_USFX.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\Galaga_Tmap_USFXEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{2CB538F6-9558-4CDE-9DDB-CCD0BC8878A3}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\Galaga_Tmap_USFX">
+      <UniqueIdentifier>{EE2E047E-545E-41C1-B0F2-CA2D4D3EF6D1}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\Galaga_Tmap_USFX\Galaga_Tmap_USFX.Build.cs">
+      <Filter>Source\Galaga_Tmap_USFX</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\Galaga_Tmap_USFX\Galaga_Tmap_USFX.cpp">
+      <Filter>Source\Galaga_Tmap_USFX</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Galaga_Tmap_USFX\Galaga_Tmap_USFX.h">
+      <Filter>Source\Galaga_Tmap_USFX</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Galaga_Tmap_USFX\Galaga_Tmap_USFXGameMode.cpp">
+      <Filter>Source\Galaga_Tmap_USFX</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Galaga_Tmap_USFX\Galaga_Tmap_USFXGameMode.h">
+      <Filter>Source\Galaga_Tmap_USFX</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Galaga_Tmap_USFX\Galaga_Tmap_USFXPawn.cpp">
+      <Filter>Source\Galaga_Tmap_USFX</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Galaga_Tmap_USFX\Galaga_Tmap_USFXPawn.h">
+      <Filter>Source\Galaga_Tmap_USFX</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Galaga_Tmap_USFX\Galaga_Tmap_USFXProjectile.cpp">
+      <Filter>Source\Galaga_Tmap_USFX</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Galaga_Tmap_USFX\Galaga_Tmap_USFXProjectile.h">
+      <Filter>Source\Galaga_Tmap_USFX</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Galaga_Tmap_USFX\NaveEnemiga.cpp">
+      <Filter>Source\Galaga_Tmap_USFX</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Galaga_Tmap_USFX\NaveEnemiga.h">
+      <Filter>Source\Galaga_Tmap_USFX</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Galaga_Tmap_USFX\NaveEnemigaCaza.cpp">
+      <Filter>Source\Galaga_Tmap_USFX</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Galaga_Tmap_USFX\NaveEnemigaCaza.h">
+      <Filter>Source\Galaga_Tmap_USFX</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Galaga_Tmap_USFX\NaveEnemigaNodriza.cpp">
+      <Filter>Source\Galaga_Tmap_USFX</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Galaga_Tmap_USFX\NaveEnemigaNodriza.h">
+      <Filter>Source\Galaga_Tmap_USFX</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Galaga_Tmap_USFX\NaveEnemigaTransporte.cpp">
+      <Filter>Source\Galaga_Tmap_USFX</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Galaga_Tmap_USFX\NaveEnemigaTransporte.h">
+      <Filter>Source\Galaga_Tmap_USFX</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

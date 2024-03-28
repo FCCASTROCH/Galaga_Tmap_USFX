@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"C:\\Users\\HP\\Documents\\Unreal Projects\\Galaga_Tmap_USFX\\Source\\Galaga_Tmap_USFX\\Galaga_Tmap_USFX.Build.cs",
+		"C:\\Users\\HP\\Documents\\Unreal Projects\\Galaga_Tmap_USFX\\Source\\Galaga_Tmap_USFX.Target.cs",
+		"C:\\Users\\HP\\Documents\\Unreal Projects\\Galaga_Tmap_USFX\\Source\\Galaga_Tmap_USFXEditor.Target.cs"
+	],
+	"EngineVersion": "4.27.2"
+}

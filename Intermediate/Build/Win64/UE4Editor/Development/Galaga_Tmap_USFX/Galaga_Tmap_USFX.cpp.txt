@@ -1,0 +1,2 @@
+C:\Users\HP\Documents\Unreal Projects\Galaga_Tmap_USFX\Intermediate\Build\Win64\UE4Editor\Development\Galaga_Tmap_USFX\Definitions.Galaga_Tmap_USFX.h
+C:\Users\HP\Documents\Unreal Projects\Galaga_Tmap_USFX\Source\Galaga_Tmap_USFX\Galaga_Tmap_USFX.h

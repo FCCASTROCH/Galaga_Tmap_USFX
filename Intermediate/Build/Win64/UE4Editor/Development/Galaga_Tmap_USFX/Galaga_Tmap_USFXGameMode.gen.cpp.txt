@@ -1,0 +1,11 @@
+C:\Users\HP\Documents\Unreal Projects\Galaga_Tmap_USFX\Intermediate\Build\Win64\UE4Editor\Development\Galaga_Tmap_USFX\Definitions.Galaga_Tmap_USFX.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
+C:\Users\HP\Documents\Unreal Projects\Galaga_Tmap_USFX\Source\Galaga_Tmap_USFX/Galaga_Tmap_USFXGameMode.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/GameModeBase.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Engine/ServerStatReplicator.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ServerStatReplicator.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameModeBase.generated.h
+C:\Users\HP\Documents\Unreal Projects\Galaga_Tmap_USFX\Source\Galaga_Tmap_USFX\NaveEnemiga.h
+C:\Users\HP\Documents\Unreal Projects\Galaga_Tmap_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_Tmap_USFX\NaveEnemiga.generated.h
+C:\Users\HP\Documents\Unreal Projects\Galaga_Tmap_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_Tmap_USFX\Galaga_Tmap_USFXGameMode.generated.h

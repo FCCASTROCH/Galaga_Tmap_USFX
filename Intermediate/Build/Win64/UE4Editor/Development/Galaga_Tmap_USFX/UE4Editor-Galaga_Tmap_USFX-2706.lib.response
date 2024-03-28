@@ -1,0 +1,27 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-Galaga_Tmap_USFX-2706.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"C:\Users\HP\Documents\Unreal Projects\Galaga_Tmap_USFX\Intermediate\Build\Win64\Galaga_Tmap_USFXEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
+"C:\Users\HP\Documents\Unreal Projects\Galaga_Tmap_USFX\Intermediate\Build\Win64\UE4Editor\Development\Galaga_Tmap_USFX\Galaga_Tmap_USFX.cpp.obj"
+"C:\Users\HP\Documents\Unreal Projects\Galaga_Tmap_USFX\Intermediate\Build\Win64\UE4Editor\Development\Galaga_Tmap_USFX\Galaga_Tmap_USFXGameMode.cpp.obj"
+"C:\Users\HP\Documents\Unreal Projects\Galaga_Tmap_USFX\Intermediate\Build\Win64\UE4Editor\Development\Galaga_Tmap_USFX\Galaga_Tmap_USFXPawn.cpp.obj"
+"C:\Users\HP\Documents\Unreal Projects\Galaga_Tmap_USFX\Intermediate\Build\Win64\UE4Editor\Development\Galaga_Tmap_USFX\Galaga_Tmap_USFXProjectile.cpp.obj"
+"C:\Users\HP\Documents\Unreal Projects\Galaga_Tmap_USFX\Intermediate\Build\Win64\UE4Editor\Development\Galaga_Tmap_USFX\NaveEnemiga.cpp.obj"
+"C:\Users\HP\Documents\Unreal Projects\Galaga_Tmap_USFX\Intermediate\Build\Win64\UE4Editor\Development\Galaga_Tmap_USFX\NaveEnemigaCaza.cpp.obj"
+"C:\Users\HP\Documents\Unreal Projects\Galaga_Tmap_USFX\Intermediate\Build\Win64\UE4Editor\Development\Galaga_Tmap_USFX\NaveEnemigaNodriza.cpp.obj"
+"C:\Users\HP\Documents\Unreal Projects\Galaga_Tmap_USFX\Intermediate\Build\Win64\UE4Editor\Development\Galaga_Tmap_USFX\NaveEnemigaTransporte.cpp.obj"
+"C:\Users\HP\Documents\Unreal Projects\Galaga_Tmap_USFX\Intermediate\Build\Win64\UE4Editor\Development\Galaga_Tmap_USFX\Galaga_Tmap_USFX.init.gen.cpp.obj"
+"C:\Users\HP\Documents\Unreal Projects\Galaga_Tmap_USFX\Intermediate\Build\Win64\UE4Editor\Development\Galaga_Tmap_USFX\Galaga_Tmap_USFXGameMode.gen.cpp.obj"
+"C:\Users\HP\Documents\Unreal Projects\Galaga_Tmap_USFX\Intermediate\Build\Win64\UE4Editor\Development\Galaga_Tmap_USFX\Galaga_Tmap_USFXPawn.gen.cpp.obj"
+"C:\Users\HP\Documents\Unreal Projects\Galaga_Tmap_USFX\Intermediate\Build\Win64\UE4Editor\Development\Galaga_Tmap_USFX\Galaga_Tmap_USFXProjectile.gen.cpp.obj"
+"C:\Users\HP\Documents\Unreal Projects\Galaga_Tmap_USFX\Intermediate\Build\Win64\UE4Editor\Development\Galaga_Tmap_USFX\NaveEnemiga.gen.cpp.obj"
+"C:\Users\HP\Documents\Unreal Projects\Galaga_Tmap_USFX\Intermediate\Build\Win64\UE4Editor\Development\Galaga_Tmap_USFX\NaveEnemigaCaza.gen.cpp.obj"
+"C:\Users\HP\Documents\Unreal Projects\Galaga_Tmap_USFX\Intermediate\Build\Win64\UE4Editor\Development\Galaga_Tmap_USFX\NaveEnemigaNodriza.gen.cpp.obj"
+"C:\Users\HP\Documents\Unreal Projects\Galaga_Tmap_USFX\Intermediate\Build\Win64\UE4Editor\Development\Galaga_Tmap_USFX\NaveEnemigaTransporte.gen.cpp.obj"
+"C:\Users\HP\Documents\Unreal Projects\Galaga_Tmap_USFX\Intermediate\Build\Win64\UE4Editor\Development\Galaga_Tmap_USFX\Default.rc2.res"
+/OUT:"C:\Users\HP\Documents\Unreal Projects\Galaga_Tmap_USFX\Intermediate\Build\Win64\UE4Editor\Development\Galaga_Tmap_USFX\UE4Editor-Galaga_Tmap_USFX-2706.lib"
